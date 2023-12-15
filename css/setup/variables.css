@@ -1,0 +1,37 @@
+:root {
+    --main-bg-color: lightblue;
+
+
+
+    /*Base colors*/
+    --clrBase: #ffffff; /*background */
+   
+    
+    /*Greys and black */
+    --clrGrey1: #cfd8dc; 
+    --clrGrey2: #acafb3; 
+    --clrGrey3: #595959; 
+    --clrGrey4: #3c4043; 
+    --clrGrey5: #202124; 
+    --clrGrey6: #444746; 
+    --clrGrey7: #f2f6fc;
+ 
+    /* gmail */
+    --clrMail: #ffffff; /*backGround site*/
+    --clrMail0: #f6f8fc; /*backGround header*/
+    --clrMail1: #d3e3fd;
+    --clrMail2: #eaf1fb;
+    --clrMail3: #eceff1;
+    --clrMail4: #eaebef;
+    
+    
+    /*notes colors pallet */
+    --clrSecondery1: #FAAFA8; 
+    --clrSecondery2: #F39F76; 
+    --clrSecondery3: #FFF8B8; 
+    --clrSecondery4: #B4DDD3; 
+    --clrSecondery5: #AECCDC; 
+    --clrSecondery6: #D3BFDB; 
+
+ 
+}

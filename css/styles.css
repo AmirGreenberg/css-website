@@ -1,0 +1,21 @@
+/* SETUP  */
+/* @import 'setup/vars.css'; */
+@import 'setup/typography.css';
+@import 'setup/variables.css';
+@import 'setup/fonts.css';
+
+/* BASE */
+@import 'basic/base.css';
+@import 'basic/helpers.css';
+@import 'basic/layout.css';
+@import 'basic/animations.css';
+@import 'basic/buttons.css';
+
+/* COMPONENTS */
+@import 'compomemts/header.css';
+@import 'compomemts/hero.css';
+@import 'compomemts/screen.css';
+@import 'compomemts/search.css';
+
+/* MEDIA */
+@import 'mq/mq.css';

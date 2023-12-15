@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FONT-AWSOME -->
+  <script defer src="https://kit.fontawesome.com/0d3f998bf1.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- SCRIPTS -->
+  <script >
+    function onLoadGallery() {
+
+      document.querySelector('.main-layout').style.display = 'grid'
+      document.querySelector('.main-menu').style.display = 'block'
+      document.querySelector('.hero').classList.add('hero-hidden')
+      document.querySelector('.header').style.opacity = '1'
+      document.querySelector('.gallery').style.display = 'flex'
+      document.querySelector('.footer').style.display = 'flex'
+    }
+
+  </script>
+
+  <title>Not-e-Mail</title>
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+</head>
+
+<body onload="init()">
+  <div class="main-screen" onclick="toggleMenu()"></div>
+  <header class="header-container">
+    <!-- HERO SECTION - ON LOAD -->
+    <div class="hero">
+      <div class="logo-box">
+        <img src="images/logo-white.png" alt="logo" class="logo" />
+      </div>
+      <div class="text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary-main">e-mail and notes</span>
+          <span class="heading-primary-sub">Make your life easier</span>
+        </h1>
+        <div></div>
+
+        <a href="#" class="btn-hero btn-white btn-animated" onclick="onLoadGallery()"><img src="images/note.png"
+            class="btn-homepage" /></a>
+        <a href="#" class="btn-hero btn-white btn-animated" onclick="onLoadGallery()"><img src="images/email.png"
+            class="btn-homepage" /></a>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header flex space-between align-center">
+      <div class="flex space-between align-center">
+        <button onclick="toggleMenu()">☰</button>
+        <img src="images/email.png" alt="logo" class="logo-header" onclick="onShowGallery()" />
+      </div>
+      <div class="search">
+        <i class="icon fa-solid fa-magnifying-glass"></i>
+        <datalist id="keywords-list" class="keywords"></datalist>
+        <input list="keywords-list" class="input filter-txt-input" type="text" name="filter-txt"
+          placeholder="Search mail..." oninput="onSetFilterText(this.value)" />
+      </div>
+      <div>
+        <img src="icons/hamburger.svg" alt="logo" class="logo-header" onclick="onShowGallery()" />
+        <img src="images/amirpicgoogle.jpg" alt="logo" class="logo-header" onclick="onShowGallery()" />
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <link rel="stylesheet" type="text/css" href="css/menu.css">
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet">
+
+  </div>
+  <nav style="display: none;" class="main-menu">
+
+
+
+    <div>
+      <a class="logo">
+      </a>
+    </div>
+    <div class="settings"></div>
+    <div class="scrollbar" id="style-1">
+
+      <ul>
+
+        <li class="compose">
+          <a>
+            <span><i class="fa fa-pen fa-lg"></i></span>
+            <span class="nav-text">Compose</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-inbox fa-lg"></i>
+            <span class="nav-text">Inbox</span>
+          </a>
+        </li>
+
+
+        <li>
+          <a>
+            <i class="fa fa-envelope-o fa-lg"></i>
+            <span class="nav-text">Contact</span>
+          </a>
+        </li>
+
+        </li>
+        <li>
+          <a>
+            <i class="fa fa-clock-o fa-lg"></i>
+            <span class="nav-text">News</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-desktop fa-lg"></i>
+            <span class="nav-text">Technology</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-plane fa-lg"></i>
+            <span class="nav-text">Travel</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-shopping-cart"></i>
+            <span class="nav-text">Shopping</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-microphone fa-lg"></i>
+            <span class="nav-text">Film & Music</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-flask fa-lg"></i>
+            <span class="nav-text">Web Tools</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-picture-o fa-lg"></i>
+            <span class="nav-text">Art & Design</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-align-left fa-lg"></i>
+            <span class="nav-text">Magazines
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-gamepad fa-lg"></i>
+            <span class="nav-text">Games</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <i class="fa fa-glass fa-lg"></i>
+            <span class="nav-text">Life & Style
+            </span>
+          </a>
+        </li>
+
+        <li class="darkerlishadowdown">
+          <a>
+            <i class="fa fa-rocket fa-lg"></i>
+            <span class="nav-text">Fun</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <li>
+
+        <a>
+          <i class="fa fa-question-circle fa-lg"></i>
+          <span class="nav-text">Help</span>
+        </a>
+      </li>
+
+
+      <ul class="logout">
+        <li>
+          <a>
+            <i class="fa fa-lightbulb-o fa-lg"></i>
+            <span class="nav-text">
+              BLOG
+            </span>
+
+          </a>
+        </li>
+      </ul>
+  </nav>
+
+  <main class="main-layout" style="display: none">
+    <table>
+      <tbody>
+        <tr class="">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <div>
+            <td class="date">Dec 14</td>
+          </div>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr class="read">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr class="read">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr class="read">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr class="read">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr class="read">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr class="read">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr class="read">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr class="read">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr class="read">
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+        <tr>
+          <td class="from">Amir Greenberg</td>
+          <td class="subject">Regarding the project</td>
+          <td class="body">I would like to fsdfs sdf sdf sdf sdfs sdfsdfsdf sdfsdfs sdfsdfsfd sdfsdf sdf sd</td>
+          <td class="date">Dec 14</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+</body>
+
+</html>
